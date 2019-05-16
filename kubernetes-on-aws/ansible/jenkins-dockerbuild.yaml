@@ -1,0 +1,9 @@
+---
+
+- name: Jenkins image build 
+  docker_image:
+    name: jenkins-image:1.0
+    build: 
+      path: "{{ playbook_dir }}/jenkins/dockerfile
+      source: build
+  become: trubecome: true

@@ -1,0 +1,13 @@
+---
+
+- hosts: localhost
+  connection: local
+
+  tasks:
+
+  - name: Jenkins Deployment 
+    command: "kubectl apply -f "{{ playbook_dir }}/jenkins/jenkins-deployment.yaml" 
+
+  - name: Jenkins Service Start 
+    command: "kubectl apply -f "{{ playbook_dir }}/jenkins/jenkins-service.yaml" 
+
