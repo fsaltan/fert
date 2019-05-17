@@ -81,7 +81,7 @@ resource "aws_security_group" "kubernetes_api" {
   }
 }
 
-# Outputs
+# Output
 
 output "kubernetes_api_dns_name" {
   value = "${aws_elb.kubernetes_api.dns_name}"
